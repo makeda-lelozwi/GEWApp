@@ -8,11 +8,11 @@ import { trigger, transition, animate, style } from '@angular/animations';
   animations: [
     trigger('fadeIn', [
       transition('void => *', [
-        style({ opacity: 0 }),  // Initial opacity of 0
-        animate(500)            // Animate to full opacity over 500ms
-      ])
-    ])
-  ]
+        style({ opacity: 0 }), // Initial opacity of 0
+        animate(500), // Animate to full opacity over 500ms
+      ]),
+    ]),
+  ],
 })
 export class FinancialLiteracyComponent {
   showContent: boolean = false;
@@ -20,7 +20,7 @@ export class FinancialLiteracyComponent {
   // Simulate content loading after 1 second
   ngOnInit() {
     setTimeout(() => {
-      this.showContent = true;  // Show content after delay
+      this.showContent = true; // Show content after delay
     }, 1000);
   }
 }
