@@ -1,19 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 /* Overall container styles */
-.container {
-  height: 100%;
-  width: 100%;
-  background-color: #00204a;
-  display: flex;
+div {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #00204a;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  display: block;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "poppins", sans-serif;
-  position: fixed; /* Fixes the container to the viewport */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .logo {
@@ -35,20 +41,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
 
 /* Buttons */
 
-.seller {
+a {
   background-color: #ffb000; /* Orange for Seller button */
   color: white;
   display: inline-block;
   margin: 10px;
-  padding: 30px 60px;
+  padding: 20px 40px;
   font-size: 24px;
   border: none;
   border-radius: 5px;
@@ -60,7 +61,7 @@
   color: white;
   display: inline-block;
   margin: 10px;
-  padding: 30px 60px;
+  padding: 20px 40px;
   font-size: 24px;
   border: none;
   border-radius: 5px;
@@ -105,10 +106,15 @@
     padding: 20px 40px;
   }
   .container {
-    position: absolute;
-    background-color: #00204a;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
   }
 }

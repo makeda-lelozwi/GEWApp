@@ -6,6 +6,7 @@ import { RouterLink, RouterModule } from '@angular/router';
   standalone: true,
   selector: 'preview-component',
   templateUrl: './preview.component.html',
+  styleUrls: ['./preview.component.css'],
   imports: [RouterLink, CommonModule],
 })
 export class PreviewComponent {
