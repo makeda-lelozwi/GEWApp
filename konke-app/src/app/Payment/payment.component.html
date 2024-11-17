@@ -1,0 +1,43 @@
+<div class="payment-container">
+    <h1>Choose a Payment Method</h1>
+  
+    <!-- Dropdown to select payment method -->
+    <select [(ngModel)]="selectedPayment()" class="payment-select">
+      <option *ngFor="let option of paymentOptions" [value]="option">{{ option }}</option>
+    </select>
+  
+    <!-- Credit Card Form -->
+    <div *ngIf="isCreditCard()">
+      <h2>Credit Card Details</h2>
+      <label>
+        Card Number:
+        <input type="text" [(ngModel)]="paymentDetails().cardNumber" />
+      </label>
+      <label>
+        Card Holder:
+        <input type="text" [(ngModel)]="paymentDetails().cardHolder" />
+      </label>
+    </div>
+  
+    <!-- PayPal Form -->
+    <div *ngIf="isPayPal()">
+      <h2>PayPal Details</h2>
+      <label>
+        PayPal Email:
+        <input type="email" [(ngModel)]="paymentDetails().paypalEmail" />
+      </label>
+    </div>
+  
+    <!-- Bank Transfer Form -->
+    <div *ngIf="isBankTransfer()">
+      <h2>Bank Transfer Details</h2>
+      <label>
+        Bank Account Number:
+        <input type="text" [(ngModel)]="paymentDetails().bankAccount" />
+      </label>
+    </div>
+  
+    <!-- Submit Button -->
+    <button class="submit-button" (click)="onSubmit()">Submit Payment</button>
+  </div>
+  
