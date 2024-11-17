@@ -1,0 +1,44 @@
+<p>Welcome Seller</p>
+<button (click)="openModal()" *ngIf="!show">Get Started</button>
+<div *ngIf="show" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Tell us more about your business</h5>
+      </div>
+      <div class="modal-body">
+        <p>industry:</p>
+        <select name="industries" id="">
+          <option value="">Manufacturing</option>
+          <option value="">Baking</option>
+          <option value=""></option>
+        </select>
+        <p>where do you live</p>
+        <select name="" id="">
+          <option value="">Gauteng</option>
+          <option value="">Western Cape</option>
+          <option value="">KwaZulu Natal</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="closeModal()">
+          Save changes
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          (click)="closeModal()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <a routerLink="/analytics">Analytics</a>
+  <a routerLink="/marketing">Marketing</a>
+  <a routerLink="/literacy">Upskill your business</a>
+</div>
